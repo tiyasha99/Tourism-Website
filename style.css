@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background: #d2691e;
+  position: fixed;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+}
+.navbar .logo a span {
+  color: #d2691e;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: #333;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500px;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: #333;
+}
+
+/* menu button styling*/
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #d2691e;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* home section styling*/
+
+.home {
+  display: flex;
+  background: url("https://www.specialholidays.com/admin/images/package/package_gallery/5c94ba72746405.38286174.jpeg")
+    no-repeat center;
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+  animation: slide 8s infinite;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+/*rgb(7, 7, 184)*/
+.home .home-content .text-3 span {
+  color: rgb(104, 9, 9);
+  font-weight: 700;
+}
+
+@keyframes slide {
+  0% {
+    background-image: url("https://images.thrillophilia.com/image/upload/s--GcJLah8e--/c_fill,h_775,q_auto,w_1600/f_auto,fl_strip_profile/v1/images/photos/000/232/174/original/1587156618_Tea-Plantation-Darjeeling.jpg.jpg?1587156618");
+  }
+  25% {
+    background-image: url("https://images.unsplash.com/photo-1620720970374-5b7e67e1e610?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  }
+  50% {
+    background-image: url("https://www.clubmahindra.com/blog/media/section_images/shuttersto-67d5d542923acf6.jpg");
+  }
+  75% {
+    background-image: url("https://patnalocalguide.com/wp-content/uploads/2020/09/Himachal-Pradesh-tourism.png");
+  }
+}
+
+.book {
+  background-color: #333;
+}
+
+.book .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.book .row .image {
+  flex: 1 1 40rem;
+}
+
+.book .row .image img {
+  width: 100%;
+}
+
+.book .row form {
+  flex: 1 1 40rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.book .row form .inputBox {
+  padding: 0.5rem 0;
+}
+
+.book .row form .inputBox input {
+  width: 100%;
+  padding: 1rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+  text-transform: none;
+}
+
+.book .row form .inputBox h3 {
+  font-size: 1rem;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.btn {
+  font-family: sans-serif;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  background: #d2691e;
+}
+
+.btn:hover {
+  background-color: #e9690e;
+}
+
+.heading {
+  font-size: 4rem;
+  color: #d2691e;
+}
+
+.image {
+  margin-top: -40%;
+  width: 10px;
+  height: 10px;
+  margin-left: 30px;
+}
+
+.packages .box-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+}
+
+.packages .box-container .box {
+  flex: 1 1 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.packages .box-container .box img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.packages .box-container .box .content {
+  padding: 1rem;
+}
+
+.packages .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.packages .box-container .box .content h3 i {
+  color: #d2691e;
+}
+
+.packages .box-container .box .content p {
+  font-size: 1rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.packages .box-container .box .content .stars i {
+  font-size: 1rem;
+  color: #d2691e;
+}
+
+.packages .box-container .box .content .price {
+  font-size: 1rem;
+  color: #333;
+  padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span {
+  color: #666;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.btnPackages {
+  width: 5rem;
+  height: 2rem;
+  background-color: #d2691e;
+  color: white;
+  position: absolute;
+  text-align: center;
+  padding-top: 0.5rem;
+  border-radius: 15px;
+  margin-top: 0.2rem;
+}
+
+.btnPackages:hover {
+  background-color: #e9690e;
+}
+
+.services {
+  background-color: #333;
+  margin-top: 3rem;
+}
+
+.services .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.services .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services .box-container .box i {
+  padding: 1rem;
+  font-size: 5rem;
+  color: #d2691e;
+}
+
+.services .box-container .box h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.services .box-container .box p {
+  font-size: 1.5rem;
+  color: rgb(204, 194, 194);
+  padding: 1rem 0;
+}
+
+.services .box-container .box:hover {
+  box-shadow: 0 1rem 2rem rgba(192, 182, 182, 0.1);
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact .row .image {
+  flex: 1 1 30rem;
+}
+
+.contact .row .image img {
+  width: 100%;
+}
+
+.contact .row form {
+  flex: 1 1 30rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea {
+  width: 49%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+  background: #f7f7f7;
+  text-transform: none;
+}
+
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+  width: 100%;
+}
+.icons {
+  margin-left: 71.3rem;
+  color: blue;
+}
+.icons a {
+  padding: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.icons a:visited {
+  color: none;
+}
+
+/*footer styling section*/
+footer {
+  background: #111;
+  padding: 20px 23px;
+  color: #fff;
+}
+footer span {
+  color: #d2691e;
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 947px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .navbar .menu li a:hover {
+    color: gray;
+  }
+  .home .home-content .text-2 {
+    font-size: 70px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 35px;
+  }
+  .max-width {
+    max-width: 800px;
+  }
+}
